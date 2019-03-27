@@ -30,8 +30,9 @@ $header-level: 6 !default;
   position: relative;
   display: block;
   padding: 7rem 0;
-  background-color: #F2D1D8;
+  background-color: #D3D7E0;
   margin-bottom: 20px;
+  box-shadow: 0 5px 4px 4px rgba(25, 25, 25, 0.2);
 
   &:first-child {
     padding-top: 0;
