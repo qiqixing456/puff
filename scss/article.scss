@@ -113,11 +113,12 @@ $header-level: 6 !default;
     margin: 0 0.5rem;
 
     a {
+      color: #9e9e9e;
       transition: 0.15s;
     }
 
     a:hover {
-      color: #495A80!important;
+      color: #f03838;
     }
   }
 }
@@ -157,10 +158,9 @@ $header-level: 6 !default;
 
     a {
       transition: 0.15s;
-      color: #9e9e9e;
     }
     a:hover {
-      color: #f03838;
+      color: #495A80!important;
     }
   }
   .pull-left {
