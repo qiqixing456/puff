@@ -1,6 +1,6 @@
 
 body{
-    font-family:YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
+    font-family:"行者笔记简",YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
 
 }
 
@@ -83,7 +83,7 @@ body{
 }
 .later_read a{
     display: inline-block;
-    font-family: "Lora",serif;
+    font-family: "DK Lemon Yellow Sun","Lora",serif;
     font-size: 24px;
     letter-spacing: 1px;
     font-style: italic;

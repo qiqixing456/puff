@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "DK Lemon Yellow Sun";
+    src: url("../font/Lemon Yellow Sun.woff2") format("woff2"),
+         url("../font/DK Lemon Yellow Sun.woff") format("woff"),
+         url("../font/DK Lemon Yellow Sun.ttf") format("truetype"),
+         url("../font/DK Lemon Yellow Sun.eot") format("embedded-opentype"),
+         url("../font/DK Lemon Yellow Sun.svg") format("svg");
+         font-weight: normal;
+        font-style: normal;
+  }
+
+  @font-face {
+    font-family: "行者笔记简";
+    src: url("../font/行者笔记简.woff2") format("woff2"),
+         url("../font/行者笔记简.woff") format("woff"),
+         url("../font/行者笔记简.ttf") format("truetype"),
+         url("../font/行者笔记简.eot") format("embedded-opentype"),
+         url("../font/行者笔记简.svg") format("svg");
+  }
