@@ -55,10 +55,10 @@
 .icon-biaoji1:before{ content: "\e670" ; }
 
 /* 浏览 */
-.icon-jiaoyin::before{  content: "\e619"; }
+.icon-jiaoyin:before{  content: "\e619"; }
 
 /* 时间 */
-.icon-shijian::before{  content: "\e617"; }
+.icon-shijian:before{  content: "\e617"; }
 
 
 
