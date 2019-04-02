@@ -18,3 +18,21 @@
          url("../font/行者笔记简.eot") format("embedded-opentype"),
          url("../font/行者笔记简.svg") format("svg");
   }
+
+  @font-face {
+     font-family: "roughage";
+     src: url("../font/roughage.woff2") format("woff2"),
+          url("../font/roughage.woff") format("woff"),
+          url("../font/roughage.ttf") format("truetype"),
+          url("../font/roughage.eot") format("embedded-opentype"),
+          url("../font/roughage.svg") format("svg");
+   }
+
+   @font-face {
+     font-family: "xjlFont";
+     src: url("../font/xjlFont.woff2") format("woff2"),
+          url("../font/xjlFont.woff") format("woff"),
+          url("../font/xjlFont.ttf") format("truetype"),
+          url("../font/xjlFont.eot") format("embedded-opentype"),
+          url("../font/xjlFont.svg") format("svg");
+   }

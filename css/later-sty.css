@@ -1,6 +1,6 @@
 
 body{
-    font-family:"行者笔记简",YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
+    font-family:YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
 
 }
 
@@ -8,7 +8,7 @@ body{
 导航栏
 */
 .header-wrap{
-    background-color: #E1E3E9;
+    background-color: #fafafa;
 }
 /* 
     文章的大标题
@@ -19,7 +19,7 @@ body{
 }
 /*   中间的文章部分   */
 .post{
-    background-color: #D3D6E0;
+    background-color: #ffffff;
     margin-top: 50px;
     border-radius: 20px;
     box-shadow: 3px 2px 4px 2px rgba(25, 25, 25, .3);
@@ -77,13 +77,17 @@ body{
     top: -205px;
     left: 0;border-radius: 10%;
 }
+/* 
+*   a标签：更多
+* */
 .later_read{
     max-width: 750px;
-    border: 1px solid;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
 }
 .later_read a{
     display: inline-block;
-    font-family: "DK Lemon Yellow Sun","Lora",serif;
+    font-family: "roughage","DK Lemon Yellow Sun","Lora",serif;
     font-size: 24px;
     letter-spacing: 1px;
     font-style: italic;
