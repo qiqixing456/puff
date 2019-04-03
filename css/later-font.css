@@ -10,14 +10,6 @@
         font-style: normal;
   }
 
-  @font-face {
-    font-family: "行者笔记简";
-    src: url("../font/行者笔记简.woff2") format("woff2"),
-         url("../font/行者笔记简.woff") format("woff"),
-         url("../font/行者笔记简.ttf") format("truetype"),
-         url("../font/行者笔记简.eot") format("embedded-opentype"),
-         url("../font/行者笔记简.svg") format("svg");
-  }
 
   @font-face {
      font-family: "roughage";

@@ -3,12 +3,25 @@ body{
     font-family:YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
 
 }
-
+#app{
+    background-color: #fafafa;
+}
 /* 
 导航栏
 */
 .header-wrap{
+    /* font-family:"xjlFont",YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
+    font-size:15px;  */
     background-color: #fafafa;
+}
+.header-wrap header{
+    max-width: 100%;
+}
+header .site-navigation {
+    padding-right: 50px;
+}
+header .site-brand{
+    padding-left: 50px;
 }
 /* 
     文章的大标题
@@ -19,14 +32,14 @@ body{
 }
 /*   中间的文章部分   */
 .post{
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     margin-top: 50px;
     border-radius: 20px;
     box-shadow: 3px 2px 4px 2px rgba(25, 25, 25, .3);
-    padding-top:30px;
+    padding: 50px;
 }
 .post:first-child {
-        padding-top: 10px;
+        padding-top: 20px;
       }
 
 .article-footer .article-meta i{
@@ -42,12 +55,24 @@ body{
 .article-footer .article-meta .span--tag i{
     color: #D3D6E0;
 }
+/* 文章部分  标题 */
+
+.article-title{
+    text-align: left;
+    padding: 0 5px;
+    font-size: 24px;
+}
+.article-title a span{
+    font-size: 35px;
+    font-family:"xjlFont",YouYuan,Tahoma,Helvetica,Arial,'宋体',sans-serif; 
+}
 /*  这里设置的是 时间那块  */
 
 .article-top-meta{
     color: #495A80; 
     border-bottom: 1px solid rgba(73,90,128, 0.2);
     text-align: left;
+    font-size: 15px;
 }
 /* 这个是标签 */
 .span--tag a{
@@ -74,7 +99,7 @@ body{
 .article-footer .later_article-position{
     position: absolute;
     top: -205px;
-    left: 105px;
+    left: 115px;
 }
 /* 
 *   a标签：更多
@@ -89,14 +114,15 @@ body{
     font-family: "roughage","DK Lemon Yellow Sun","Lora",serif;
     font-size: 24px;
     letter-spacing: 1px;
+    margin: 0 10px;
     font-style: italic;
     color:#495A80;
 }
 
-
-
+/* 浏览 */
 .later_liulan-position{
     position: absolute;
     top: -215px;
     right: 0;
+    margin-right:7px; 
 }
