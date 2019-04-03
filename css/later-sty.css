@@ -53,8 +53,9 @@ header .site-brand{
     line-height: 30px;
 }
 .article-footer .article-meta .span--tag i{
-    color: #D3D6E0;
+    color: #495A80;
 }
+
 /* 文章部分  标题 */
 
 .article-title{
@@ -80,15 +81,17 @@ header .site-brand{
     width: auto;
     height: 30px;
     font-size: 15px;
-    color: #D3D6E0;
-    /* background-color: #495A80; */
+    color: #495A80;
     border: 1px solid #495A80;
     border-radius: 10%;
     padding:0 10px;
     margin-left: 5px;
 }
-.span--tag a:hover{
+.article-footer .article-meta .span--tag a:hover{
     background-color: #495A80;
+    color: #fafafa;
+}
+.article-footer .article-meta .span--tag a:hover i{
     color: #fafafa;
 }
 
@@ -116,7 +119,6 @@ header .site-brand{
     letter-spacing: 1px;
     margin: 0 10px;
     font-style: italic;
-    color:#495A80;
 }
 
 /* 浏览 */
