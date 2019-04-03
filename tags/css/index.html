@@ -201,20 +201,6 @@
   <article class="posts-collapse">
     <header>
       <h2>
-        <a href="/passages/Stick/">
-          <span>【置顶】我只是想写写东西</span>
-        </a>
-      </h2>
-      <div class="post-meta">
-        03-27
-      </div>
-    </header>
-  </article>
-  
-  
-  <article class="posts-collapse">
-    <header>
-      <h2>
         <a href="/passages/hello-world/">
           <span>Hello World</span>
         </a>
@@ -392,6 +378,21 @@ document.querySelector(".back-to-top").addEventListener("click", backToTop, fals
         }
         // $(this).attr("data-fancybox", "gallery"); // if you add 'data-fancybox', img will display after showed
         var element = document.createElement("a");
+        $(element).attr("data-fancybox", "gallery");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      });
+      
+      clearInterval(fancyTimer);
+    });
+  }, 10);
+</script>
+
+    
+  </body>
+
+</html>
+ment.createElement("a");
         $(element).attr("data-fancybox", "gallery");
         $(element).attr("href", $(this).attr("src"));
         $(this).wrap(element);
