@@ -47,8 +47,7 @@ body{
 .article-top-meta{
     color: #495A80; 
     border-bottom: 1px solid rgba(73,90,128, 0.2);
-    padding-bottom: 15px;
-    text-align: right;
+    text-align: left;
 }
 /* 这个是标签 */
 .span--tag a{
@@ -57,14 +56,15 @@ body{
     height: 30px;
     font-size: 15px;
     color: #D3D6E0;
-    background-color: #495A80;
+    /* background-color: #495A80; */
+    border: 1px solid #495A80;
     border-radius: 10%;
     padding:0 10px;
     margin-left: 5px;
 }
 .span--tag a:hover{
-    background-color: #D3D6E0;
-    color: #495A80;
+    background-color: #495A80;
+    color: #fafafa;
 }
 
 /*  这里设置的是分类  */
@@ -72,10 +72,9 @@ body{
     position: relative;
 }
 .article-footer .later_article-position{
-    border-radius: 10%;
     position: absolute;
     top: -205px;
-    left: 0;border-radius: 10%;
+    left: 105px;
 }
 /* 
 *   a标签：更多
@@ -92,4 +91,12 @@ body{
     letter-spacing: 1px;
     font-style: italic;
     color:#495A80;
+}
+
+
+
+.later_liulan-position{
+    position: absolute;
+    top: -215px;
+    right: 0;
 }
