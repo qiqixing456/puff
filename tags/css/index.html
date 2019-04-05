@@ -8,7 +8,7 @@
   
   
   
-  <title>标签: css | VICHY021</title>
+  <title>标签: CSS | VICHY021</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -191,7 +191,7 @@
     <div class="collection-title">
       <h2>
         
-          <span>标签 : css</span>
+          <span>标签 : CSS</span>
         
       </h2>
     </div>
@@ -201,8 +201,8 @@
   <article class="posts-collapse">
     <header>
       <h2>
-        <a href="/passages/hello-world/">
-          <span>Hello World</span>
+        <a href="/passages/CSS-self-adaption/">
+          <span>CSS布局-三栏布局</span>
         </a>
       </h2>
       <div class="post-meta">
@@ -373,26 +373,6 @@ document.querySelector(".back-to-top").addEventListener("click", backToTop, fals
     }
     $(document).ready(function() {
       $(".post img").each(function () {
-        if($(this).parent().get(0).tagName.toLowerCase() === "a") {
-          return;
-        }
-        // $(this).attr("data-fancybox", "gallery"); // if you add 'data-fancybox', img will display after showed
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "gallery");
-        $(element).attr("href", $(this).attr("src"));
-        $(this).wrap(element);
-      });
-      
-      clearInterval(fancyTimer);
-    });
-  }, 10);
-</script>
-
-    
-  </body>
-
-</html>
-(function () {
         if($(this).parent().get(0).tagName.toLowerCase() === "a") {
           return;
         }
