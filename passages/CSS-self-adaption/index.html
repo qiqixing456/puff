@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="CSS布局,CSS,">
+    <meta name="keywords" content="CSS,CSS,布局,">
   
 
   <script>
@@ -203,8 +203,8 @@
     
       <span>
         分类 : 
-          <a href="/categories/CSS布局/">
-            CSS布局
+          <a href="/categories/CSS/">
+            CSS
           </a>
       </span>
     
@@ -227,7 +227,12 @@
 <p>优点：简单，兼容性好<br>缺点：需要清除浮动，否则会带来很多问题，比如导致父容器高度塌陷等</p>
 </blockquote>
 <h2 id="绝对定位-absolute"><a href="#绝对定位-absolute" class="headerlink" title="绝对定位-absolute"></a>绝对定位-absolute</h2><p>HTML结构<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;section class=&quot;layout absolute&quot;&gt;</span><br><span class="line">  &lt;article class=&quot;left-center-right&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">      &lt;h2&gt;通过绝对定位-布局&lt;/h2&gt;</span><br><span class="line">      &lt;p&gt;1111111111111111&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure></p>
-<p>CSS结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  .layout.absolute div&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">  &#125;</span><br><span class="line">  .layout.absolute .left&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    left: 0;</span><br><span class="line">    background-color: indianred;</span><br><span class="line">  &#125;</span><br><span class="line">  .layout.absolute .right&#123;</span><br><span class="line">    right:0;</span><br><span class="line">    width: 300px;</span><br><span class="line">    background-color: green;</span><br><span class="line">  &#125;</span><br><span class="line">  .layout.absolute .center&#123;</span><br><span class="line">    left: 300px;</span><br><span class="line">     right: 300px;</span><br><span class="line">    background-color: cadetblue;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p>CSS结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  .layout.absolute div&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">  &#125;</span><br><span class="line">  .layout.absolute .left&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    left: 0;</span><br><span class="line">    background-color: indianred;</span><br><span class="line">  &#125;</span><br><span class="line">  .layout.absolute .right&#123;</span><br><span class="line">    right:0;</span><br><span class="line">    width: 300px;</span><br><span class="line">    background-color: green;</span><br><span class="line">  &#125;</span><br><span class="line">  .layout.absolute .center&#123;</span><br><span class="line">    left: 300px;</span><br><span class="line">    right: 300px;</span><br><span class="line">    background-color: cadetblue;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p>绝对布局中</p>
+<blockquote>
+<p>优点：快捷，方便<br>缺点：绝对定位脱离文档流</p>
+</blockquote>
+<h2 id="flew布局"><a href="#flew布局" class="headerlink" title="flew布局"></a>flew布局</h2><p>HTML结构<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;section class=&quot;layout absolute&quot;&gt;</span><br><span class="line">  &lt;article class=&quot;left-center-right&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">      &lt;h2&gt;通过绝对定位-布局&lt;/h2&gt;</span><br><span class="line">      &lt;p&gt;1111111111111111&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/article&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure></p>
     </div>
   </div>
   
@@ -300,6 +305,12 @@
           <span class="span--tag">
             <a href="/tags/CSS/">
               #CSS
+            </a>
+          </span>
+          
+          <span class="span--tag">
+            <a href="/tags/布局/">
+              #布局
             </a>
           </span>
           
