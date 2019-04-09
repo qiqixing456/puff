@@ -8,12 +8,12 @@
   
   
   
-  <title>【置顶】MY BLOG | VICHY021</title>
+  <title>Vue入门（1） | VICHY021</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="Hexo, theme-bmw">
+    <meta name="keywords" content="Vue,基础,Vue,">
   
 
   <script>
@@ -193,17 +193,24 @@
 
 <div class="post">
   <h1 class="article-title">
-    <span>【置顶】MY BLOG</span>
+    <span>Vue入门（1）</span>
   </h1>
   <div class="article-top-meta">
     <span>
       发布 : 
-      2019-03-27
+      2019-04-08
     </span>
+    
+      <span>
+        分类 : 
+          <a href="/categories/Vue/">
+            Vue
+          </a>
+      </span>
     
     
       <span>
-        浏览 : <span class="article-timer" data-identity="index"></span>
+        浏览 : <span class="article-timer" data-identity="Vue-basic-1"></span>
       </span>
     
   </div>
@@ -212,7 +219,8 @@
 
   <div class="article-content">
     <div class="markdown-body">
-      <p></p>
+      <br>每个Vue应用都是通过用 Vue函数 创建一个Vue实例对象开始的，在文档中经常会使用 vm (ViewModel 的缩写) 这个变量名表示 Vue 实例<p></p>
+<h2 id="Vue基本格式："><a href="#Vue基本格式：" class="headerlink" title="Vue基本格式："></a>Vue基本格式：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div id=&quot;box&quot;&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; seen &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var box=new Vue(&#123;</span><br><span class="line">    //el是值作用范围，只能指向一个对象(可以是id选择器或者是class选择器)</span><br><span class="line">    el:&apos;#box&apos;,</span><br><span class="line">    </span><br><span class="line">    //data 指向的是数据</span><br><span class="line">    data:&#123;</span><br><span class="line">      seen:&apos;hello World!&apos;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //methods是方法体</span><br><span class="line">    methods:&#123;</span><br><span class="line">        fn:function()&#123;</span><br><span class="line">          .......</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
     </div>
   </div>
   
@@ -223,7 +231,7 @@
         
           本文作者 : 钟紫珊 <br>
         
-        原文链接 : <a href>http://yoursite.com/passages/index/</a><br>
+        原文链接 : <a href>http://yoursite.com/passages/Vue-basic-1/</a><br>
         版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
         </blockquote>
       </div>
@@ -280,6 +288,21 @@
     <div class="article-meta pull-left">
       <span>
         
+          <i class="iconfont icon-06tags"></i>标签: 
+          
+          <span class="span--tag">
+            <a href="/tags/基础/">
+              #基础
+            </a>
+          </span>
+          
+          <span class="span--tag">
+            <a href="/tags/Vue/">
+              #Vue
+            </a>
+          </span>
+          
+        
       </span>
     </div>
     <div class="article-meta pull-right">
@@ -300,15 +323,9 @@
       <div class="nav-pre">
         <i class="iconfont icon-prev"></i>
         上一篇:
-        <a href="/passages/CSS-self-adaption/" target="_self">CSS布局-三栏布局</a>
+        <a href="/passages/index/" target="_self">【置顶】MY BLOG</a>
       </div>
     
-    
-      <div class="nav-next">
-        下一篇:
-        <a href="/passages/Vue-basic-1/" target="_self">Vue入门（1）</a>
-        <i class="iconfont icon-next"></i>
-      </div>
     
   </nav>
 
