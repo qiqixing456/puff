@@ -8,7 +8,7 @@
   
   
   
-  <title>Vue入门（1） | VICHY021</title>
+  <title>Vue入门（3） | VICHY021</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -193,12 +193,12 @@
 
 <div class="post">
   <h1 class="article-title">
-    <span>Vue入门（1）</span>
+    <span>Vue入门（3）</span>
   </h1>
   <div class="article-top-meta">
     <span>
       发布 : 
-      2019-04-08
+      2019-04-16
     </span>
     
       <span>
@@ -210,7 +210,7 @@
     
     
       <span>
-        浏览 : <span class="article-timer" data-identity="Vue-basic-1"></span>
+        浏览 : <span class="article-timer" data-identity="Vue-basic-3"></span>
       </span>
     
   </div>
@@ -219,122 +219,11 @@
 
   <div class="article-content">
     <div class="markdown-body">
-      <br>每个Vue应用都是通过用 Vue函数 创建一个Vue实例对象开始的(即所有的Vue组件都是Vue实例)，在文档中经常会使用 vm (ViewModel 的缩写) 这个变量名表示 Vue 实例<p></p>
-<h2 id="Hello-World-："><a href="#Hello-World-：" class="headerlink" title="Hello World!："></a>Hello World!：</h2><blockquote>
-<p>这是一个 Viex<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;box&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; seen &#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>这是一个Model<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var hello = &#123;</span><br><span class="line">    seen:&apos;hello World!&apos;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>创建一个vue实例，ViewModel,它连接View 和 Model<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  var box=new Vue(&#123;</span><br><span class="line">//el指向Viex</span><br><span class="line">    el:&apos;#box&apos;,</span><br><span class="line">    </span><br><span class="line">//data 指向 Model</span><br><span class="line">    data:hello,</span><br><span class="line"></span><br><span class="line">//methods是方法体</span><br><span class="line">    methods:&#123;</span><br><span class="line">        fn:function()&#123;</span><br><span class="line">          .......</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p> 1)当属性的值发生改变时，视图将会产生“响应”,即匹配为更新的值<br> 2)只有当实例对象被创建的时候，data中存在的属性才是响应式.<br> 3)Object.freeze()  这个函数可以阻止修改现有属性(阻止响应)</p>
-<blockquote>
-<p>  eg:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> var v = new Vue(&#123;</span><br><span class="line">   el:&apos;#app&apos;,</span><br><span class="line">   data:&#123;</span><br><span class="line">     obj:&apos;hello&apos;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line"> Object.freeze(obj);</span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; obj &#125;&#125;&lt;/p&gt;</span><br><span class="line">   &lt;!-- 这里的 `obj` 不会更新！ --&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;obj = &apos;baz&apos;&quot;&gt;Change it&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>在Vue中，存在一些前缀 $的属性方法，这些都是为了与用户自定义属性区分开来<br><a href="https://cn.vuejs.org/v2/api/#%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7" target="_blank" rel="noopener">Vue-api参考</a></p>
-<h2 id="常用的-v-指令"><a href="#常用的-v-指令" class="headerlink" title="常用的 v-指令"></a>常用的 v-指令</h2><h3 id="①-v-model"><a href="#①-v-model" class="headerlink" title="① v-model"></a>① v-model</h3><p>  v-model表示在表单元素上创建双向数据绑定</p>
-<p> <img src="/passages/Vue-basic-1/1.jpg" alt="v-model"><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app1&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123; seen1 &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;input type=&quot;text&quot; v-model=&quot;seen1&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;      </span><br><span class="line">  new Vue(&#123;</span><br><span class="line">    el:&apos;#app1&apos;,</span><br><span class="line">    data:&#123;</span><br><span class="line">      seen1:&apos;Hello World!&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="②-v-if"><a href="#②-v-if" class="headerlink" title="② v-if"></a>② v-if</h3><p>  v-if是条件渲染指令，它根据表达式的真假来插入和删除元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app2&quot;&gt;</span><br><span class="line">  &lt;h1&gt;v-if测试&lt;/h1&gt;</span><br><span class="line">  &lt;h1 v-if=&quot;Yes&quot;&gt;Yes&lt;/h1&gt;</span><br><span class="line">  &lt;h1 v-if=&quot;No&quot;&gt;No&lt;/h1&gt;</span><br><span class="line">  &lt;h1 v-if=&quot;age&gt;=23&quot;&gt;Age:36&lt;/h1&gt;</span><br><span class="line">  &lt;h1 v-if=&quot;name.indexOf(&apos;jact&apos;)&gt;=0&quot;&gt;name:&#123;&#123;name&#125;&#125;&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">    el:&apos;#app2&apos;,</span><br><span class="line">    data:&#123;</span><br><span class="line">      Yes:true,</span><br><span class="line">      No:false,</span><br><span class="line">      age:30,</span><br><span class="line">      name:&apos;jact&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>和 v-show 的区别是，v-if 在浏览器中显示的是将‘假’的值删除，而 v-show 在浏览器中是将‘假’的值，用CSS样式 display:none 使其消失</p>
-</blockquote>
-<h3 id="③-v-else"><a href="#③-v-else" class="headerlink" title="③ v-else"></a>③ v-else</h3><p>  v-else 为 v-if 添加一个 ‘else块’<br>  它必须跟在 v-if 指令的后面，否则不会被识别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app4&quot;&gt;</span><br><span class="line">  &lt;h1&gt;v-else测试&lt;/h1&gt;</span><br><span class="line">  &lt;h1 v-if=&quot;age&gt;=23&quot;&gt;Age:36&lt;/h1&gt;</span><br><span class="line">  &lt;h1 v-else&gt;Age:&#123;&#123;real&#125;&#125;&lt;/h1&gt;  ====&gt;v-if指令的h1将会消失，换成 v-else 的 Age:20</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-  new Vue({
-    el:&apos;#app4&apos;,
-    data:{
-      age:21,
-      real:20
-    }
-  })
-&lt;/script&gt;
-</code></pre><h3 id="④-v-show"><a href="#④-v-show" class="headerlink" title="④ v-show"></a>④ v-show</h3><p>  v-show 和 v-if 一样是条件渲染指令</p>
-<pre><code>&lt;div id=&quot;app3&quot;&gt;
-  &lt;h1&gt;v-show测试&lt;/h1&gt;
-  &lt;h1 v-show=&quot;Yes&quot;&gt;Yes&lt;/h1&gt;
-  &lt;h1 v-show=&quot;No&quot;&gt;No&lt;/h1&gt;
-  &lt;h1 v-show=&quot;age&gt;=23&quot;&gt;Age:36&lt;/h1&gt;
-      &lt;!--在页面就是，这个name是display:none--&gt;
-  &lt;h1 v-show=&quot;name.indexOf(&apos;jact&apos;)&gt;=0&quot;&gt;name:{{name}}&lt;/h1&gt;
-&lt;/div&gt;
-</code></pre><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-  new Vue({
-    el:&apos;#app3&apos;,
-    data:{
-      Yes:true,
-      No:false,
-      age:30,
-      name:&apos;jat&apos;
-     }
-  })
-&lt;/script&gt;
-</code></pre><blockquote>
-<p>使用v-show指令的元素始终会被渲染到HTML，它只是简单地为元素设置CSS的style属性。</p>
-</blockquote>
-<h3 id="⑤-v-for"><a href="#⑤-v-for" class="headerlink" title="⑤ v-for"></a>⑤ v-for</h3><p>v-for指令基于一个数组渲染一个列表，它和JavaScript的遍历语法相似：<br>   eg.  v-for=”item in items”<br>    (items是一个数组，item是当前被遍历的数组元素。)</p>
-<pre><code>&lt;div id=&quot;app5&quot;&gt;
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th&gt;Name&lt;/th&gt;
-        &lt;th&gt;Age&lt;/th&gt;
-        &lt;th&gt;Sex&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tr v-for=&quot;person in people&quot;&gt;
-      &lt;td&gt;{{ person.name }}&lt;/td&gt;
-      &lt;td&gt;{{ person.age }}&lt;/td&gt;
-      &lt;td&gt;{{ person.sex }}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-</code></pre><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-  new Vue({
-   el:&apos;#app5&apos;,
-   data:{
-    people:[
-      { name: &apos;job&apos;,age:16,sex:&apos;M&apos;},
-      { name: &apos;jjj&apos;,age:15,sex:&apos;F&apos;},
-      { name: &apos;hhh&apos;,age:85,sex:&apos;S&apos;},
-      { name: &apos;yyyy&apos;,age:98,sex:&apos;F&apos;}
-    ]
-  }
- })
-&lt;/script&gt;
-</code></pre><h3 id="⑥-v-bind"><a href="#⑥-v-bind" class="headerlink" title="⑥ v-bind"></a>⑥ v-bind</h3><p> v-bind 给元素绑定一些属性，特性</p>
-<pre><code>  &lt;!-- v-bind:class 可以写成 :class ,写法一样 --&gt;
-&lt;div id=&quot;app&quot; v-bind:class=&apos;ap&apos;&gt;
-  &lt;a v-bind:href=&quot;url&quot;&gt;百度
-&lt;/div&gt;
-</code></pre><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-  new Vue({
-   el:&apos;#app&apos;,
-   data:{
-    ap:&apos;app-bind&apos;,
-    url:&quot;http://wwww.baidu.com&quot;
-  }
- })
-&lt;/script&gt;
-</code></pre><h3 id="⑦-v-on"><a href="#⑦-v-on" class="headerlink" title="⑦ v-on"></a>⑦ v-on</h3><p>v-on指令用于给监听DOM事件，它的用语法和v-bind是类似的，例如监听<a>元素的点击事件：<br> eg. <a v-on:click="doSomething"><br> v-on: 可简化成@</a></a></p>
-<pre><code>&lt;div id=&quot;app7&quot;&gt;
-  &lt;input type=&quot;button&quot; @click=&quot;say&quot; value=&quot;hhh&quot;&gt;
-&lt;/div&gt;
-</code></pre><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-  new Vue({
-    el:&apos;#app7&apos;,
-    methods:{
-      say:function () {
-      alert(&quot;hi,my name is vichy&quot;)
-      }
-    }
-  })
- })
-&lt;/script&gt;
-</code></pre>
+      <br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &#123;&#123; seen &#125;&#125;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt; &#123;&#123; say &#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var arr=&apos;123456&apos;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            seen:&apos;hello&apos;,</span><br><span class="line">            another:&apos;Vue&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">        watch:&#123;</span><br><span class="line">            seen:function (newValue,oldValue) &#123;</span><br><span class="line">            console.log(&quot;newValue:&quot;+newValue);</span><br><span class="line">            console.log(&quot;oldValue:&quot;+oldValue);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        computed:&#123;</span><br><span class="line">            say:function () &#123;</span><br><span class="line">                return &apos;computed:&apos;+this.seen+&quot;,&quot;+this.another+&quot;,&quot;+arr;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>初始页面：<br><img src="/passages/Vue-basic-3/01.png" alt="index"> </p>
+<h2 id="侦听器：-watch"><a href="#侦听器：-watch" class="headerlink" title="侦听器： watch"></a>侦听器： watch</h2><p>使用watch来响应数据的变化,当值第一次绑定的时候，不会执行监听函数，只有值发生改变才会执行<br>watch主要用于监控vue实例的变化，它监控的变量必须在data里面声明才可以<br><img src="/passages/Vue-basic-3/02.jpg" alt="watch"></p>
+<h2 id="计算属性：computed"><a href="#计算属性：computed" class="headerlink" title="计算属性：computed"></a>计算属性：computed</h2><p>computed比较适合对多个变量或者对象进行处理后返回一个结果值<br><img src="/passages/Vue-basic-3/03.jpg" alt="computed"><br><img src="/passages/Vue-basic-3/04.jpg" alt="computed"></p>
     </div>
   </div>
   
@@ -345,7 +234,7 @@
         
           本文作者 : 钟紫珊 <br>
         
-        原文链接 : <a href>http://yoursite.com/passages/Vue-basic-1/</a><br>
+        原文链接 : <a href>http://yoursite.com/passages/Vue-basic-3/</a><br>
         版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
         </blockquote>
       </div>
@@ -437,13 +326,13 @@
       <div class="nav-pre">
         <i class="iconfont icon-prev"></i>
         上一篇:
-        <a href="/passages/index/" target="_self">【置顶】MY BLOG</a>
+        <a href="/passages/Vue-basic-2/" target="_self">Vue入门（2）</a>
       </div>
     
     
       <div class="nav-next">
         下一篇:
-        <a href="/passages/Vue-basic-2/" target="_self">Vue入门（2）</a>
+        <a href="/passages/ES6-basic/" target="_self">ES6基础</a>
         <i class="iconfont icon-next"></i>
       </div>
     
